@@ -3,6 +3,7 @@ package com.algaworks.erp.repository;
 import java.io.Serializable;
 import java.util.List;
 
+import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
 import javax.persistence.criteria.CriteriaBuilder;
@@ -15,6 +16,7 @@ public class RamoAtividadeRepository implements Serializable{
 
 	private static final long serialVersionUID = 1L;
 	
+	@Inject
 	private EntityManager manager;
 
 	public RamoAtividadeRepository() {}
