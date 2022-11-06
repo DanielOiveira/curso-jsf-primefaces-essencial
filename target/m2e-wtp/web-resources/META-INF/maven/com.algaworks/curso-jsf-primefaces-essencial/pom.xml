@@ -1,10 +1,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
+	
 	<groupId>com.algaworks</groupId>
 	<artifactId>curso-jsf-primefaces-essencial</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
-	<name>Curso JSF e PrimeFaces</name>
+	
+	<name>curso-jsf-primefaces-essencial</name>
 	<description>Curso JSF e PrimeFaces Essencial</description>
 
 	<properties>
@@ -18,11 +20,11 @@
 			<version>2.4.0.Final</version>
 			<scope>compile</scope>
 		</dependency>
-	
+
 		<dependency>
 			<groupId>org.glassfish</groupId>
 			<artifactId>javax.faces</artifactId>
-			<version>2.2.13</version>
+			<version>2.2.14</version>
 			<scope>compile</scope>
 		</dependency>
 
@@ -36,21 +38,21 @@
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
-			<version>3.0.1</version>
+			<version>3.1.0</version>
 			<scope>provided</scope>
 		</dependency>
 
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-validator</artifactId>
-			<version>5.3.0.Final</version>
+			<version>5.3.2.Final</version>
 			<scope>compile</scope>
 		</dependency>
 
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-entitymanager</artifactId>
-			<version>5.2.3.Final</version>
+			<version>5.2.4.Final</version>
 			<scope>compile</scope>
 		</dependency>
 
