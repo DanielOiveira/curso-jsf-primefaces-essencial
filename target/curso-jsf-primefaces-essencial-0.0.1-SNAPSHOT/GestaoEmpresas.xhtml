@@ -34,13 +34,16 @@
 				<h:outputLabel />
 				<h:commandButton value="Salvar" actionListener="#{gestaoEmpresasBean.salvar}"/>
 				
+				<h:outputLabel />
+				<h:commandLink value="Ajuda?" actionListener="#{gestaoEmpresasBean.ajuda}"/>
+				
 				<h:dataTable value="#{[0,0,0,0]}">
 					<h:column>
 						<f:facet name="header">
 							<h:outputText value="Razão Social" />
 						</f:facet>
 						
-						<h:outputText  value="Teste" />
+						<h:outputText  value="Algaworks Corporation LTDA" />
 					</h:column>
 					
 					<h:column>
@@ -48,7 +51,7 @@
 							<h:outputText value="Nome Fantasia" />
 						</f:facet>
 						
-						<h:outputText  value="Teste" />
+						<h:outputText  value="Alga Cursos" />
 					</h:column>
 					
 					<h:column>
