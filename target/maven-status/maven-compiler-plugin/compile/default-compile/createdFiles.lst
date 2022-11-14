@@ -8,5 +8,3 @@ com\algaworks\erp\repository\EmpresaRepository.class
 com\algaworks\erp\model\Empresa.class
 com\algaworks\erp\model\TipoEmpresa.class
 com\algaworks\erp\controller\GestaoEmpresasBean.class
-com\algaworks\erp\repository\SchemaGeneration.class
-com\algaworks\erp\repository\CamadaPersistencia.class
