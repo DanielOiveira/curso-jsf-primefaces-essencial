@@ -70,6 +70,8 @@
 			<p:dialog id="empresaDialog" header="Nova Enpresa" widgetVar="empresaDialogWidgetVar" modal="true" resizable="false" closeOnEscape="true" >
 				<p:messages id="empresaMessages" />
 				
+				<p:defaultCommand target="salvarCommandButton" scope="empresaDialog" />
+				
 				<h:panelGrid id="empresaPanelGrid" columns="2" rendered="#{gestaoEmpresasBean.empresa ne null}">
 					<p:outputLabel value="Razão Social: " for="razaoSocial"/>
 					<p:inputText id="razaoSocial" size="80" maxlength="120" value="#{gestaoEmpresasBean.empresa.razaoSocial}"/>
@@ -95,7 +97,7 @@
 					
 					<h:outputLabel />
 					
-					<p:commandButton value="Salvar" actionListener="#{gestaoEmpresasBean.salvar}"
+					<p:commandButton id="salvarCommandButton" value="Salvar" actionListener="#{gestaoEmpresasBean.salvar}"
 					update="empresaPanelGrid empresaMessages" oncomplete="if (!args.validationFailed) PF('empresaDialogWidgetVar').hide()" process="empresaDialog"/>
 				</h:panelGrid>
 			</p:dialog>
