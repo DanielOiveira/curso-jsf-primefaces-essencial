@@ -37,7 +37,11 @@
 		                <span class="ui-icon ui-icon-grip-dotted-vertical" />
 		            </span>
 		            
-		            <p:commandButton title="Editar" icon="fa fa-edit" disabled="#{not gestaoEmpresasBean.empresaSelecionada}"/>
+		            <p:commandButton title="Editar" icon="fa fa-edit" disabled="#{not gestaoEmpresasBean.empresaSelecionada}" 
+		            actionListener="#{gestaoEmpresasBean.prepararEdicao}" oncomplete="PF('empresaDialogWidgetVar').show()" 
+		             update="empresaDialog" process="@this">
+		             	 <p:resetInput target="empresaDialog" />
+		             </p:commandButton>
 		            
 		            <p:commandButton title="Excluir" icon="fa fa-trash" disabled="#{not gestaoEmpresasBean.empresaSelecionada}"/>
 		            
@@ -91,7 +95,7 @@
 					</p:selectOneMenu>
 					
 					<p:outputLabel value="CNPJ: " for="cnpj"/>
-					<p:inputMask id="cnpj" mask="99.999.999/999-99" size="18" maxlength="18" value="#{gestaoEmpresasBean.empresa.cnpj}"/>
+					<p:inputMask id="cnpj" mask="99.999.999/9999-99" size="18" maxlength="18" value="#{gestaoEmpresasBean.empresa.cnpj}"/>
 					
 					<p:outputLabel value="Data Fundação: " for="dataFundacao" />
 					<p:calendar id="dataFundacao" pattern="dd/MM/yyyy" size="30" value="#{gestaoEmpresasBean.empresa.dataFundacao}"/>
