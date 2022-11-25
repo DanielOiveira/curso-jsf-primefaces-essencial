@@ -54,7 +54,11 @@
 		            
 		            <p:commandButton title="Exportar para o Excel" icon="fa fa-file-excel-o" ajax="false">
 		            	<p:dataExporter type="xls" target="empresasDataTable" fileName="Relatório Empresas"/>
-		            </p:commandButton>			
+		            </p:commandButton>		
+		            
+		             <p:commandButton title="Exportar para PDF" icon="fa fa-file-pdf-o" ajax="false">
+		            	<p:dataExporter type="pdf" target="empresasDataTable" fileName="Relatório Empresas" pageOnly="true"/>
+		            </p:commandButton>	
 				</f:facet>
 	   		</p:toolbar>
 	   		
