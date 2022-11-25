@@ -54,14 +54,20 @@ public class GestaoEmpresasBean implements Serializable {
 		ramoAtividadeConverter = new RamoAtividadeConverter(Arrays.asList(empresa.getRamoAtividade()));
 	}
 	
+	public void excluir() {
+		cadastroEmpresaService.excluir(empresa);
+		
+		empresa = null;
+		
+		atualizarRegistros();
+		
+		messages.info("Empresa excluida com sucesso");
+	}
+	
 	public void salvar() {
 		cadastroEmpresaService.salvar(empresa);
 		
-		if(jaHouvePesquisa()) {
-			pesquisar();
-		}else {
-			todasEmpresas();
-		}
+		atualizarRegistros();
 		
 		messages.info("Empresa salva com sucesso");
 		
@@ -70,6 +76,14 @@ public class GestaoEmpresasBean implements Serializable {
 	
 	public void todasEmpresas() {
 		listaEmpresas = empresaRepository.todas();
+	}
+	
+	private void atualizarRegistros() {
+		if(jaHouvePesquisa()) {
+			pesquisar();
+		}else {
+			todasEmpresas();
+		}
 	}
 	
 	private boolean jaHouvePesquisa() {
