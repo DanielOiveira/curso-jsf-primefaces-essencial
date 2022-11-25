@@ -45,7 +45,7 @@
 		            
 		            <p:commandButton title="Excluir" icon="fa fa-trash" disabled="#{not gestaoEmpresasBean.empresaSelecionada}"
 		             actionListener="#{gestaoEmpresasBean.excluir}" update="messages empresasDataTable toolbar" process="@this">
-		             	
+		             	<p:confirm icon="ui-icon-alert" header="Confirmação de exclusão" message="Quer mesmo excluir o registro?"/>
 		             </p:commandButton>
 		            
 					<span class="ui-separator">
